@@ -1,0 +1,3 @@
+#!/bin/bash
+source /mnt/public/home/lvwp/anaconda3/bin/activate /mnt/public/home/lvwp/anaconda3/envs/torch
+python3 -u /mnt/public/home/lvwp/process/RC/race_sdot_copy_2.py --data_dir=/mnt/public/home/lvwp/process/RC/RACE --bert_model=/mnt/public/home/lvwp/process/RC/bert-base-uncased --output_dir=/mnt/public/home/lvwp/process/RC/base_models --max_seq_length=512 --do_train --do_eval  --do_lower_case --train_batch_size=16 --eval_batch_size=4 --learning_rate=2e-5 --num_train_epochs=10 --gradient_accumulation_steps=16 --loss_scale=0

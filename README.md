@@ -1,35 +1,23 @@
-# __[T-PAMI' 2022]  Meta-DETR__ <br> (Official PyTorch Implementation)
+# Tri-Attention <br> (Official PyTorch Implementation)
 
 [![arXiv](https://img.shields.io/badge/arXiv-2208.00219-b31b1b.svg)](https://arxiv.org/abs/2208.00219)
-[![Survey](https://github.com/sindresorhus/awesome/blob/main/media/mentioned-badge.svg)](https://github.com/dk-liang/Awesome-Visual-Transformer)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) 
-[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) 
-[![GitHub license](https://badgen.net/github/license/ZhangGongjie/Meta-DETR)](https://github.com/ZhangGongjie/Meta-DETR/blob/master/LICENSE)
 
 -------
 
 This repository is the official PyTorch implementation of the
-T-PAMI 2022 paper "[Meta-DETR: Image-Level Few-Shot Detection with Inter-Class Correlation Exploitation](https://doi.org/10.1109/TPAMI.2022.3195735)" by _Gongjie Zhang, Zhipeng Luo, Kaiwen Cui, Shijian Lu, and Eric P. Xing_. 
+**** 2022 paper "[Tri-Attention: Explicit Context-Aware Attention Mechanism for Natural Language Processing](https://doi.org/*****)" by _Rui Yu, Yifeng Li, Wenpeng Lu and Longbing Cao_. 
 
-<b> [ Important Notice ] </b> &nbsp;&nbsp; Meta-DETR first appeared as a tech report on arXiv.org (https://arxiv.org/abs/2103.11731v2) in 2021. Since its release, we have made substantial improvements to the original version. This repository corresponds to [the final published version accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI) in 2022](https://doi.org/10.1109/TPAMI.2022.3195735). Please kindly be advised to refer to the latest version of the paper.
+<b> [ Important Notice ] </b> &nbsp;&nbsp; Tri-Attention first appeared as a tech report on arXiv.org (https://arxiv.org/abs/*****) in 2022. Since its release, we have made substantial improvements to the original version. Please kindly be advised to refer to the latest version of the paper.
 
 
 -------
 &nbsp;
 ## Brief Introduction
 
-Meta-DETR is a state-of-the-art few-shot object detector that performs image-level meta-learning-based prediction and effectively exploits the inter-class correlation to enhance generalization from old knowledge to new classes. Meta-DETR entirely bypasses the proposal quality gap between base and novel classes, thus achieving superior performance than R-CNN-based few-shot object detectors. In addition, Meta-DETR performs meta-learning on a set of support classes at one go, thus effectively leveraging the inter-class correlation for better generalization.
+The proposed Tri-Attention mechanism expands the standard two-dimensional attention framework to explicitly involve and couple contextual information with query and key, hence the attention weights more sufficiently capture context-aware sequence interactions. To the best of our knowledge, this is the first work on explicitly involving context (contextual features) and learning query-key-context interaction-based attention between sequences.
+Tri-attention takes a general three-dimensional tensor framework, which can be instantiated into different implementations and applied to various tasks. We illustrate four variants by expanding the additive, dot-product, scaled dot-product and trilinear operations on query, key and context using tensor algebra for calculating Tri-Attention.
 
-<div align=center>  
-<img src='.assets/motivation.jpg' width="60%">
-</div>
-
-
-<div align=center>  
-<img src='.assets/MetaDETR_architecture.jpg' width="95%">
-</div>
-
-Please check [our T-PAMI paper](https://doi.org/10.1109/TPAMI.2022.3195735) or [its preprint version](https://arxiv.org/abs/2208.00219) for more details.
+Please check [our paper](https://doi.org/****) or [its preprint version](https://arxiv.org/abs/****) for more details.
 
 
 -------
@@ -41,13 +29,12 @@ Please check [our T-PAMI paper](https://doi.org/10.1109/TPAMI.2022.3195735) or [
 You must have NVIDIA GPUs to run the codes.
 
 The implementation codes are developed and tested with the following environment setups:
-- Ubuntu LTS 18.04
-- 8x NVIDIA V100 GPUs (32GB)
-- CUDA 10.2
-- Python == 3.7
-- PyTorch == 1.7.1+cu102, TorchVision == 0.8.2+cu102
-- GCC == 7.5.0
-- cython, pycocotools, tqdm, scipy
+- numpy==1.19.5
+- setproctitle==1.2.2
+- torch==1.8.0.dev20210113+cu110
+- torchvision==0.9.0.dev20210113+cu110
+- tqdm==4.56.2
+- transformers==2.8.0
 
 We recommend using the exact setups above. However, other environments (Linux, Python>=3.7, CUDA>=9.2, GCC>=5.4, PyTorch>=1.5.1, TorchVision>=0.6.1) should also work properly.
 
@@ -55,41 +42,12 @@ We recommend using the exact setups above. However, other environments (Linux, P
 
 ### Code Installation
 
-First, clone the repository locally:
-```shell
-git clone https://github.com/ZhangGongjie/Meta-DETR.git
+This code is implemented using PyTorch v1.8.0, and provides out of the box support with CUDA 11.2
+Anaconda is the recommended to set up this codebase.
 ```
-
-We recommend you to use [Anaconda](https://www.anaconda.com/) to create a conda environment:
-```bash
-conda create -n meta_detr python=3.7 pip
-```
-
-Then, activate the environment:
-```bash
-conda activate meta_detr
-```
-
-Then, install PyTorch and TorchVision:
-
-(preferably using our recommended setups; CUDA version should match your own local environment)
-```bash
-conda install pytorch=1.7.1 torchvision=0.8.2 cudatoolkit=10.2 -c pytorch
-```
-
-After that, install other requirements:
-```bash
-conda install cython scipy tqdm
-pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
-```
-
-As Meta-DETR is developed upon Deformable DETR, you need to compile [*Deformable Attention*](https://github.com/fundamentalvision/Deformable-DETR).
-```bash
-# compile CUDA operators of Deformable Attention
-cd Meta-DETR
-cd ./models/ops
-sh ./make.sh
-python test.py  # unit test (should see all checking is True)
+# https://pytorch.org
+conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
+pip install -r requirements.txt
 ```
 
 &nbsp;

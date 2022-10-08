@@ -54,9 +54,9 @@ pip install -r requirements.txt
 
 ### Data Preparation
 
-#### MS-COCO for Few-Shot Object Detection
+#### Ubuntu Corpus V1 for retrieval-based dialogues
 
-Please download [COCO 2017 dataset](https://cocodataset.org/) and organize them as following:
+Please download [Ubuntu Corpus V1 dataset](https://cocodataset.org/) and organize them as following:
 
 ```
 code_root/

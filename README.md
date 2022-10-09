@@ -358,3 +358,14 @@ If you find Meta-DETR useful or inspiring, please consider citing:
 
 Our proposed Meta-DETR is heavily inspired by many outstanding prior works, including [DETR](https://github.com/facebookresearch/detr) and [Deformable DETR](https://github.com/fundamentalvision/Deformable-DETR).
 Thank the authors of above projects for open-sourcing their implementation codes!
+
+
+
+[1]: https://github.com/huggingface/transformers
+[2]: https://github.com/taesunwhang/BERT-ResSel
+[3]: https://drive.google.com/file/d/1-4E0eEjyp7n_F75TEh7OKrpYPK4GLNoE/view?usp=sharing
+[4]: https://drive.google.com/file/d/1n2zigNDiIArWtsiV9iUQLwfSBgtNn7ws/view?usp=sharing
+[5]: https://drive.google.com/file/d/16Rv8rSRneq7gfPRkpFZseNYfswuoqI4-/view?usp=sharing
+[6]: https://www.dropbox.com/s/2fdn26rj6h9bpvl/ubuntu_data.zip
+[7]: https://github.com/MarkWuNLP/MultiTurnResponseSelection
+[8]: https://github.com/cooelf/DeepUtteranceAggregation

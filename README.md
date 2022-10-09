@@ -40,8 +40,6 @@ The implementation codes are developed and tested with the following environment
 
 We recommend using the exact setups above. However, other environments (Linux, Python>=3.7, CUDA>=9.2, GCC>=5.4, PyTorch>=1.5.1, TorchVision>=0.6.1) should also work properly.
 
-&nbsp;
-
 #### Code Installation
 
 This code is implemented using PyTorch v1.8.0, and provides out of the box support with CUDA 11.2
@@ -51,8 +49,6 @@ Anaconda is the recommended to set up this codebase.
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
 pip install -r requirements.txt
 ```
-
-&nbsp;
 
 #### Data Preparation
 
@@ -66,7 +62,6 @@ Dialogue/
 ```
 
 ----------
-&nbsp;
 
 ### Usage
 

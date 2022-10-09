@@ -50,30 +50,63 @@ conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11
 pip install -r requirements.txt
 ```
 
-#### Data Preparation
+#### Preparing Data and Checkpoints
+-------------
 
-##### Ubuntu Corpus V1 for retrieval-based dialogues
+#### Post-trained and fine-tuned Checkpoints
 
-Please download [Ubuntu Corpus V1 dataset](https://cocodataset.org/) and organize them as following:
+We provide following post-trained and fine-tuned checkpoints. 
 
-```
-Dialogue/
-└── ubuntu_data/
-```
+- [fine-grained post-trained checkpoint for 3 benchmark datasets (ubuntu, douban, e-commerce)][3]
+- [fine-tuned checkpoint for 3 benchmark datasets (ubuntu, douban, e-commerce)][4]
+
+
+#### Data pkl for Fine-tuning (Response Selection)
+We used the following data for post-training and fine-tuning
+- [fine-grained post-training dataset and fine-tuning dataset for 3 benchmarks (ubuntu, douban, e-commerce)][5]
+
+
+Original version for each dataset is availble in [Ubuntu Corpus V1][6], [Douban Corpus][7], and [E-Commerce Corpus][8], respectively.
 
 ----------
 
 ### Usage
 
-#### Reproducing Paper Results
+##### Making Data for post-training and fine-tuning  
 
-All scripts to reproduce results reported in [our T-PAMI paper](https://doi.org/10.1109/TPAMI.2022.3195735)
-are stored in [`./scripts`](scripts). The arguments are pretty easy and straightforward to understand. 
-
-Taking MS-COCO as an example, run the following commands to reproduce paper results:
-```bash
-GPUS_PER_NODE=8 ./tools/run_dist_launch.sh 8 ./scripts/run_experiments_coco.sh
 ```
+Data_processing.py
+```
+
+
+### Post-training Examples
+
+##### (Ubuntu Corpus V1, Douban Corpus, E-commerce Corpus)
+
+```shell
+python -u FPT/ubuntu_final.py --num_train_epochs 25
+python -u FPT/douban_final.py --num_train_epochs 27
+python -u FPT/e_commmerce_final.py --num_train_epochs 34
+```
+
+### Fine-tuning Examples
+
+##### (Ubuntu Corpus V1, Douban Corpus, E-commerce Corpus)
+
+###### Taining 
+```shell
+To train the model, set `--is_training`
+python -u Fine-Tuning/Response_selection.py --task ubuntu --is_training
+python -u Fine-Tuning/Response_selection.py --task douban --is_training
+python -u Fine-Tuning/Response_selection.py --task e_commerce --is_training
+```
+###### Testing
+```shell
+python -u Fine-Tuning/Response_selection.py --task ubuntu
+python -u Fine-Tuning/Response_selection.py --task douban 
+python -u Fine-Tuning/Response_selection.py --task e_commerce
+```
+
 
 
 

@@ -25,9 +25,9 @@ Please check [our paper](https://doi.org/****) or [its preprint version](https:/
 
 ## Dialogue
 
-## Installation
+### Installation
 
-### Pre-Requisites
+#### Pre-Requisites
 You must have NVIDIA GPUs to run the codes.
 
 The implementation codes are developed and tested with the following environment setups:
@@ -42,7 +42,7 @@ We recommend using the exact setups above. However, other environments (Linux, P
 
 &nbsp;
 
-### Code Installation
+#### Code Installation
 
 This code is implemented using PyTorch v1.8.0, and provides out of the box support with CUDA 11.2
 Anaconda is the recommended to set up this codebase.
@@ -54,9 +54,9 @@ pip install -r requirements.txt
 
 &nbsp;
 
-### Data Preparation
+#### Data Preparation
 
-#### Ubuntu Corpus V1 for retrieval-based dialogues
+##### Ubuntu Corpus V1 for retrieval-based dialogues
 
 Please download [Ubuntu Corpus V1 dataset](https://cocodataset.org/) and organize them as following:
 
@@ -65,7 +65,7 @@ Dialogue/
 └── ubuntu_data/
 ```
 
-#### RACE for machine reading comprehension
+##### RACE for machine reading comprehension
 
 Please download [RACE](https://cocodataset.org/) and organize them as following:
 
@@ -77,7 +77,7 @@ RC/
     └── test/
 ```
 
-#### LCQMC for sentence semantic matching
+##### LCQMC for sentence semantic matching
 
 Please download [LCQMC](https://cocodataset.org/) and organize them as following:
 
@@ -92,9 +92,9 @@ SPM/
 ----------
 &nbsp;
 
-## Usage
+### Usage
 
-### Reproducing Paper Results
+#### Reproducing Paper Results
 
 All scripts to reproduce results reported in [our T-PAMI paper](https://doi.org/10.1109/TPAMI.2022.3195735)
 are stored in [`./scripts`](scripts). The arguments are pretty easy and straightforward to understand. 

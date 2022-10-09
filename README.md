@@ -1,6 +1,6 @@
 # Tri-Attention <br> (Official PyTorch Implementation)
 
-[![arXiv](https://img.shields.io/badge/arXiv-2208.00219-b31b1b.svg)](https://arxiv.org/abs/2208.00219)
+[![arXiv](****)
 
 -------
 
@@ -211,7 +211,7 @@ pip install -r requirements.txt
 
 The LCQMC dataset is provided in [LCQMC][9]. 
 
-The pre-trained language model BERT is provided in [BERT-base-chinese][https://huggingface.co/bert-base-chinese#].
+The pre-trained language model BERT is provided in [BERT-base-chinese](https://huggingface.co/bert-base-chinese#).
 
 ----------
 

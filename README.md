@@ -209,18 +209,9 @@ pip install -r requirements.txt
 
 #### Post-trained and fine-tuned Checkpoints
 
-We provide following post-trained and fine-tuned checkpoints. 
+The LCQMC dataset is provided in [LCQMC][9]. 
 
-- [fine-grained post-trained checkpoint for ubuntu benchmark dataset][3]
-- [fine-tuned checkpoint for ubuntu benchmark dataset ][4]
-
-
-#### Data pkl for Fine-tuning (Response Selection)
-We used the following data for post-training and fine-tuning
-- [fine-grained post-training dataset and fine-tuning dataset for ubuntu benchmark ][5]
-
-
-Original version for ubuntu dataset is availble in [Ubuntu Corpus V1][6].
+The pre-trained language model BERT is provided in [BERT-base-chinese][https://huggingface.co/bert-base-chinese#].
 
 ----------
 
@@ -240,17 +231,15 @@ python -u FPT/ubuntu_final.py --num_train_epochs 25
 
 ### Fine-tuning Example
 
-###### Taining 
+###### Taining & Testing
 ```shell
 To train the model, set `--is_training`
-python -u Fine-Tuning/Response_selection.py --task ubuntu --is_training
+python -u SPM/Response_selection.py --task ubuntu --is_training
 ```
 ###### Testing
 ```shell
-python -u Fine-Tuning/Response_selection.py --task ubuntu
+python -u Fine-Tuning/run.py
 ```
-
-
 
 ----------
 
@@ -260,12 +249,12 @@ python -u Fine-Tuning/Response_selection.py --task ubuntu
 If you find Meta-DETR useful or inspiring, please consider citing:
 
 ```bibtex
-@article{Meta-DETR-2022,
-  author={Zhang, Gongjie and Luo, Zhipeng and Cui, Kaiwen and Lu, Shijian and Xing, Eric P.},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
-  title={{Meta-DETR}: Image-Level Few-Shot Detection with Inter-Class Correlation Exploitation}, 
+@article{Meta-Tri-2022,
+  author={Rui Yu, Yifeng Li, Wenpeng Lu and Longbing Cao},
+  journal={****}, 
+  title={Tri-Attention: Explicit Context-Aware Attention Mechanism for Natural Language Processing}, 
   year={2022},
-  doi={10.1109/TPAMI.2022.3195735},
+  doi={****},
 }
 ```
 
@@ -273,8 +262,7 @@ If you find Meta-DETR useful or inspiring, please consider citing:
 &nbsp;
 ## Acknowledgement
 
-Our proposed Meta-DETR is heavily inspired by many outstanding prior works, including [DETR](https://github.com/facebookresearch/detr) and [Deformable DETR](https://github.com/fundamentalvision/Deformable-DETR).
-Thank the authors of above projects for open-sourcing their implementation codes!
+Our proposed Tri-Attention is heavily inspired by many outstanding prior works, including [COIN](https://aclanthology.org/2021.emnlp-main.312.pdf).
 
 
 
@@ -286,3 +274,4 @@ Thank the authors of above projects for open-sourcing their implementation codes
 [6]: https://www.dropbox.com/s/2fdn26rj6h9bpvl/ubuntu_data.zip
 [7]: https://github.com/MarkWuNLP/MultiTurnResponseSelection
 [8]: https://github.com/cooelf/DeepUtteranceAggregation
+[9]: https://www.aclweb.org/anthology/C18-1166/

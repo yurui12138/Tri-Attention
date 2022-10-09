@@ -109,14 +109,12 @@ python -u Fine-Tuning/Response_selection.py --task ubuntu
 You must have NVIDIA GPUs to run the codes.
 
 The implementation codes are developed and tested with the following environment setups:
-- numpy==1.19.5
-- setproctitle==1.2.2
-- torch==1.8.0.dev20210113+cu110
-- torchvision==0.9.0.dev20210113+cu110
-- tqdm==4.56.2
-- transformers==2.8.0
+- pytorch-lightning==1.2.3
+- transformers==4.3.3
+- datasets==1.4.1
+- optuna==2.6.0
+- torch==1.8.0
 
-We recommend using the exact setups above. However, other environments (Linux, Python>=3.7, CUDA>=9.2, GCC>=5.4, PyTorch>=1.5.1, TorchVision>=0.6.1) should also work properly.
 
 #### Code Installation
 
@@ -131,48 +129,22 @@ pip install -r requirements.txt
 #### Preparing Data and Checkpoints
 -------------
 
-#### Post-trained and fine-tuned Checkpoints
+#### Dataset and pre-trained language model
 
-We provide following post-trained and fine-tuned checkpoints. 
+The RACE dataset is provided in [RACE](http://www.cs.cmu.edu/~glai1/data/race/). 
 
-- [fine-grained post-trained checkpoint for ubuntu benchmark dataset][3]
-- [fine-tuned checkpoint for ubuntu benchmark dataset ][4]
+The pre-trained language model BERT is provided in [BERT-base-uncased](https://huggingface.co/models).
 
-
-#### Data pkl for Fine-tuning (Response Selection)
-We used the following data for post-training and fine-tuning
-- [fine-grained post-training dataset and fine-tuning dataset for ubuntu benchmark ][5]
-
-
-Original version for ubuntu dataset is availble in [Ubuntu Corpus V1][6].
 
 ----------
 
 ### Usage
 
-##### Making Data for post-training and fine-tuning  
-
-```
-Data_processing.py
-```
-
-
-### Post-training Example
+#### Taining & Testing
 ```shell
-python -u FPT/ubuntu_final.py --num_train_epochs 25
+python3 -u RC/race.py --data_dir=RC/RACE --bert_model=RC/bert-base-uncased --output_dir=RC/base_models --max_seq_length=512 --do_train --do_eval --test  --do_lower_case --train_batch_size=16 --eval_batch_size=4 --test_batch_size=4 --learning_rate=2e-5 --num_train_epochs=10 --gradient_accumulation_steps=16 --loss_scale=0
 ```
 
-### Fine-tuning Example
-
-###### Taining 
-```shell
-To train the model, set `--is_training`
-python -u Fine-Tuning/Response_selection.py --task ubuntu --is_training
-```
-###### Testing
-```shell
-python -u Fine-Tuning/Response_selection.py --task ubuntu
-```
 
 
 
@@ -207,7 +179,7 @@ pip install -r requirements.txt
 #### Preparing Data and Checkpoints
 -------------
 
-#### Post-trained and fine-tuned Checkpoints
+#### Dataset and pre-trained language model
 
 The LCQMC dataset is provided in [LCQMC][9]. 
 

@@ -210,7 +210,6 @@ If you find Tri-Attention useful or inspiring, please consider citing:
   journal={****}, 
   title={Tri-Attention: Explicit Context-Aware Attention Mechanism for Natural Language Processing}, 
   year={2022},
-  doi={****},
 }
 ```
 

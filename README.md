@@ -217,28 +217,10 @@ The pre-trained language model BERT is provided in [BERT-base-chinese](https://h
 
 ### Usage
 
-##### Making Data for post-training and fine-tuning  
-
-```
-Data_processing.py
-```
-
-
-### Post-training Example
-```shell
-python -u FPT/ubuntu_final.py --num_train_epochs 25
-```
-
-### Fine-tuning Example
-
-###### Taining & Testing
+#### Taining & Testing
 ```shell
 To train the model, set `--is_training`
 python -u SPM/Response_selection.py --task ubuntu --is_training
-```
-###### Testing
-```shell
-python -u Fine-Tuning/run.py
 ```
 
 ----------

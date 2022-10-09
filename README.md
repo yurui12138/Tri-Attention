@@ -65,30 +65,6 @@ Dialogue/
 └── ubuntu_data/
 ```
 
-##### RACE for machine reading comprehension
-
-Please download [RACE](https://cocodataset.org/) and organize them as following:
-
-```
-RC/
-└── RACE/
-    └── train/
-    └── dev/
-    └── test/
-```
-
-##### LCQMC for sentence semantic matching
-
-Please download [LCQMC](https://cocodataset.org/) and organize them as following:
-
-```
-SPM/
-└── LCQMC/
-    └── train/
-    └── dev/
-    └── test/
-```
-
 ----------
 &nbsp;
 

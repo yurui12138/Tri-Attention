@@ -219,8 +219,7 @@ The pre-trained language model BERT is provided in [BERT-base-chinese](https://h
 
 #### Taining & Testing
 ```shell
-To train the model, set `--is_training`
-python -u SPM/Response_selection.py --task ubuntu --is_training
+python -u SPM/run.py
 ```
 
 ----------

@@ -184,14 +184,15 @@ python -u Fine-Tuning/Response_selection.py --task ubuntu
 You must have NVIDIA GPUs to run the codes.
 
 The implementation codes are developed and tested with the following environment setups:
-- numpy==1.19.5
-- setproctitle==1.2.2
-- torch==1.8.0.dev20210113+cu110
-- torchvision==0.9.0.dev20210113+cu110
-- tqdm==4.56.2
-- transformers==2.8.0
+- python3.6
+- torch == 1.5.1
+- tqdm == 4.46.0
+- scikit-learn == 0.23.1
+- numpy == 1.19.4
+- transformers == 3.4.0
+- nltk==3.5
 
-We recommend using the exact setups above. However, other environments (Linux, Python>=3.7, CUDA>=9.2, GCC>=5.4, PyTorch>=1.5.1, TorchVision>=0.6.1) should also work properly.
+We recommend using the exact setups above. However, other environments (Linux, Python>=3.6, CUDA>=9.2, GCC>=5.4, PyTorch>=1.5.1, TorchVision>=0.6.1) should also work properly.
 
 #### Code Installation
 

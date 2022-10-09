@@ -59,42 +59,33 @@ pip install -r requirements.txt
 Please download [Ubuntu Corpus V1 dataset](https://cocodataset.org/) and organize them as following:
 
 ```
-code_root/
-└── data/
-    ├── coco_fewshot/        # Few-shot dataset 
-    └── coco/                # MS-COCO dataset
-        ├── train2017/
-        ├── val2017/
-        └── annotations/
-            ├── instances_train2017.json
-            └── instances_val2017.json
+Dialogue/
+└── ubuntu_data/
 ```
 
-The [`coco_fewshot`](data/coco_fewshot) folder (_already provided in this repo_) contains randomly sampled few-shot datasets as described in [the paper](https://doi.org/10.1109/TPAMI.2022.3195735), including the five data setups with different random seeds. In each K-shot (K=1,3,5,10,30) data setup, we ensure that there are exactly K object instances for each novel class. The numbers of base-class object instances vary.
+#### RACE for machine reading comprehension
 
-
-#### Pascal VOC for Few-Shot Object Detection
-
-We transform the original Pascal VOC dataset format into MS-COCO format for parsing. The transformed Pascal VOC dataset is available for download at [GoogleDrive](https://drive.google.com/file/d/1JCxJ2lmNX5E4YsvAZnngVZ5hQeJU67tj/view?usp=sharing).
-
-
-After downloading MS-COCO-style Pascal VOC, please organize them as following:
+Please download [RACE](https://cocodataset.org/) and organize them as following:
 
 ```
-code_root/
-└── data/
-    ├── voc_fewshot_split1/     # VOC Few-shot dataset
-    ├── voc_fewshot_split2/     # VOC Few-shot dataset
-    ├── voc_fewshot_split3/     # VOC Few-shot dataset
-    └── voc/                    # MS-COCO-Style Pascal VOC dataset
-        ├── images/
-        └── annotations/
-            ├── xxxxx.json
-            ├── yyyyy.json
-            └── zzzzz.json
+RC/
+└── RACE/
+    └── train/
+    └── dev/
+    └── test/
 ```
 
-Similarly, the few-shot datasets for Pascal VOC are also provided in this repo ([`voc_fewshot_split1`](data/voc_fewshot_split1), [`voc_fewshot_split2`](data/voc_fewshot_split2), and [`voc_fewshot_split3`](data/voc_fewshot_split3)). For each class split, there are 10 data setups with different random seeds. In each K-shot (K=1,2,3,5,10) data setup, we ensure that there are exactly K object instances for each novel class. The numbers of base-class object instances vary.
+#### LCQMC for sentence semantic matching
+
+Please download [LCQMC](https://cocodataset.org/) and organize them as following:
+
+```
+SPM/
+└── LCQMC/
+    └── train/
+    └── dev/
+    └── test/
+```
 
 ----------
 &nbsp;

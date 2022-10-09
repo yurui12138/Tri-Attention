@@ -23,6 +23,101 @@ Please check [our paper](https://doi.org/****) or [its preprint version](https:/
 -------
 &nbsp;
 
+## Dialogue
+
+## Installation
+
+### Pre-Requisites
+You must have NVIDIA GPUs to run the codes.
+
+The implementation codes are developed and tested with the following environment setups:
+- numpy==1.19.5
+- setproctitle==1.2.2
+- torch==1.8.0.dev20210113+cu110
+- torchvision==0.9.0.dev20210113+cu110
+- tqdm==4.56.2
+- transformers==2.8.0
+
+We recommend using the exact setups above. However, other environments (Linux, Python>=3.7, CUDA>=9.2, GCC>=5.4, PyTorch>=1.5.1, TorchVision>=0.6.1) should also work properly.
+
+&nbsp;
+
+### Code Installation
+
+This code is implemented using PyTorch v1.8.0, and provides out of the box support with CUDA 11.2
+Anaconda is the recommended to set up this codebase.
+```
+# https://pytorch.org
+conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
+pip install -r requirements.txt
+```
+
+&nbsp;
+
+### Data Preparation
+
+#### Ubuntu Corpus V1 for retrieval-based dialogues
+
+Please download [Ubuntu Corpus V1 dataset](https://cocodataset.org/) and organize them as following:
+
+```
+Dialogue/
+└── ubuntu_data/
+```
+
+#### RACE for machine reading comprehension
+
+Please download [RACE](https://cocodataset.org/) and organize them as following:
+
+```
+RC/
+└── RACE/
+    └── train/
+    └── dev/
+    └── test/
+```
+
+#### LCQMC for sentence semantic matching
+
+Please download [LCQMC](https://cocodataset.org/) and organize them as following:
+
+```
+SPM/
+└── LCQMC/
+    └── train/
+    └── dev/
+    └── test/
+```
+
+----------
+&nbsp;
+
+## Usage
+
+### Reproducing Paper Results
+
+All scripts to reproduce results reported in [our T-PAMI paper](https://doi.org/10.1109/TPAMI.2022.3195735)
+are stored in [`./scripts`](scripts). The arguments are pretty easy and straightforward to understand. 
+
+Taking MS-COCO as an example, run the following commands to reproduce paper results:
+```bash
+GPUS_PER_NODE=8 ./tools/run_dist_launch.sh 8 ./scripts/run_experiments_coco.sh
+```
+
+
+
+
+
+## RC
+
+
+
+## SPM
+
+
+
+
+
 ## Installation
 
 ### Pre-Requisites

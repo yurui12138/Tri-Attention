@@ -142,7 +142,21 @@ The pre-trained language model BERT is provided in [BERT-base-uncased](https://h
 
 #### Taining & Testing
 ```shell
-python3 -u RC/race.py --data_dir=RC/RACE --bert_model=RC/bert-base-uncased --output_dir=RC/base_models --max_seq_length=512 --do_train --do_eval --test  --do_lower_case --train_batch_size=16 --eval_batch_size=4 --test_batch_size=4 --learning_rate=2e-5 --num_train_epochs=10 --gradient_accumulation_steps=16 --loss_scale=0
+python3 -u RC/race.py --data_dir=RC/RACE 
+                      --bert_model=RC/bert-base-uncased 
+                      --output_dir=RC/base_models 
+                      --max_seq_length=512 
+                      --do_train 
+                      --do_eval 
+                      --test  
+                      --do_lower_case 
+                      --train_batch_size=16 
+                      --eval_batch_size=4 
+                      --test_batch_size=4 
+                      --learning_rate=2e-5 
+                      --num_train_epochs=10 
+                      --gradient_accumulation_steps=16 
+                      --loss_scale=0
 ```
 
 

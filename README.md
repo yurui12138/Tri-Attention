@@ -31,7 +31,7 @@ The implementation codes are developed and tested with the following environment
 - tqdm==4.56.2
 - transformers==2.8.0
 
-We recommend using the exact setups above. However, other environments (Linux, Python>=3.7, CUDA>=9.2, GCC>=5.4, PyTorch>=1.5.1, TorchVision>=0.6.1) should also work properly.
+We recommend using the exact setups above.
 
 #### Code Installation
 

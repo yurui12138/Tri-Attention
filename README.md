@@ -106,7 +106,7 @@ The implementation codes are developed and tested with the following environment
 - transformers == 3.4.0
 - nltk==3.5
 
-We recommend using the exact setups above. However, other environments (Linux, Python>=3.6, CUDA>=9.2, GCC>=5.4, PyTorch>=1.5.1, TorchVision>=0.6.1) should also work properly.
+We recommend using the exact setups above. 
 
 #### Code Installation
 
@@ -125,7 +125,7 @@ pip install -r requirements.txt
 
 The LCQMC dataset is provided in [LCQMC][9]. 
 
-The pre-trained language model BERT is provided in [BERT-base-chinese](https://huggingface.co/bert-base-chinese#).
+The pre-trained language model BERT is provided in [BERT-base-Chinese](https://huggingface.co/bert-base-chinese#).
 
 ----------
 

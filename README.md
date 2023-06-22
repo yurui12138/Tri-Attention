@@ -35,7 +35,7 @@ We recommend using the exact setups above.
 
 #### Code Installation
 
-This code is implemented using PyTorch v1.8.0, and provides out of the box support with CUDA 11.2
+This code is implemented using PyTorch v1.8.0, and provides out of the box support with CUDA 11.1
 Anaconda is the recommended to set up this codebase.
 ```
 # https://pytorch.org
@@ -110,7 +110,7 @@ We recommend using the exact setups above.
 
 #### Code Installation
 
-This code is implemented using PyTorch v1.8.0, and provides out of the box support with CUDA 11.2
+This code is implemented using PyTorch v1.8.0, and provides out of the box support with CUDA 11.1
 Anaconda is the recommended to set up this codebase.
 ```
 # https://pytorch.org
@@ -154,7 +154,7 @@ The implementation codes are developed and tested with the following environment
 
 #### Code Installation
 
-This code is implemented using PyTorch v1.8.0, and provides out of the box support with CUDA 11.2
+This code is implemented using PyTorch v1.8.0, and provides out of the box support with CUDA 11.1
 Anaconda is the recommended to set up this codebase.
 ```
 # https://pytorch.org
